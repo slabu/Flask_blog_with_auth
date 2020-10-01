@@ -106,14 +106,6 @@ def edit_post(post_id):
     
     if request.method == 'POST':        
         item = PostModel.find_by_id(post_id)
-        
-        print("Post image file from db = " + item.post_image)
-        print("image_name from form like a filename \'" + request.files['post_image'].filename + "\'")
-
-        if 'image_edition' in request.form.keys():
-            print(True)
-        else:
-            print(False)
 
         if item.post_image != 'None':
             if request.files['post_image'].filename != '':                
@@ -121,8 +113,6 @@ def edit_post(post_id):
         
                 if file.filename:
                     new_image_name = post.post_image
-                    print(file.filename)
-
                 
                 request.files['post_image'].filename = new_image_name
                 os.remove('static/uploads/images/' + new_image_name)
@@ -154,16 +144,10 @@ def edit_post(post_id):
                     new_image_name = rebuild(new_name)
 
                 request.files['post_image'].filename = new_image_name
-                print(request.files['post_image'].filename)
                 os.remove('static/uploads/images/' + new_image_name)
                 filename = images.save(request.files['post_image'])
             else:
                 new_image_name = 'None'
-        
-        print(os.path.exists('static/uploads/images/image_0.jpg'))
-        print(new_image_name)
-        
-        print(dir(request.form))
 
         input_data = PostModel.parser(request.form)
         input_data['post_image'] = new_image_name
@@ -197,10 +181,6 @@ def edit_post(post_id):
 def add_post():
     if request.method == 'GET':
         return render_template('add_post.html', user=UserModel(), validate_user=load_user(current_user.get_id()))
-
-def allowed_file(filename):
-    if filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS:
-        return '.'
 
 def rebuild(name):
     new_name = []
