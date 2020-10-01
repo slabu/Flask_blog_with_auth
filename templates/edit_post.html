@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css', v=1) }}">
+    </head>
+
+    <body class="post_edit">
+
+        <div class="header">
+            <div class="project_logo">
+                <img src="../static/icons/logo.png" width="30" height="30">
+            </div>
+            <div class="nav_buttons">
+                <div class="home_button">
+                    <a href="{{url_for('index')}}">Home</a>
+                </div>
+                <div class="my_posts">
+                    <a href="{{url_for('my_posts')}}">My posts</a>
+                </div>
+
+                <div class="add_post_button">
+                    <a href="{{ url_for('add_post') }}">Add new post</a>
+                </div>
+            </div>
+            <div class="log_buttons">
+                {% if validate_user == None %}
+                <div class="register">
+                    <a href="{{url_for('register')}}">Register</a>
+                </div>
+                <div class="login">
+                    <a href="{{url_for('login_page')}}">Login</a>
+                </div>
+                {% endif %}
+
+                {% if validate_user != None %}
+                <div class="logout">
+                    <a href="{{url_for('logout')}}">Logout</a>
+                </div>
+                <div class="logged_in_user">
+                    Hello, {{user.find_by_id(current_user.get_id()).user_login}}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <h1>Edit post</h1>
+
+        <div class="post_editor">
+            <form method="POST" action="/edit_post_{{post.post_id}}" enctype="multipart/form-data">
+                
+                <div class="add_post_name">
+                    <input type="text" value="{{post.post_name}}" name="post_name">
+                </div>
+
+                <div class="edit_post_text">
+                    <textarea name="post_text" cols="40", rows="10" placeholder="Type some content">{{ post.post_text }}</textarea>
+                </div>
+
+                <div class="add_post_tags">
+                    <input type="text" value="{{ post_tags }}" name="post_tags">
+                </div>
+                
+                {% if post.post_image != 'None' %}
+                <div class="post_edit_image">
+                    <img src="{{ resized_img_src(post.post_image, width=500, height=500, mode='fit') }} ">
+                </div>
+
+                <div class="image_checkbox">
+                    <input type="checkbox" name="image_edition">Save current image</br>
+                </div>
+
+                {% else %}
+                    <input type="hidden" name="image_name" value="{{ post_image }}">
+
+                {% endif %}
+
+                <div class="add_post_image">
+                    <input type="file" name="post_image" accept="image/*,image/jpeg,image/png" value="static/uploads/images/image_0.jpg">
+                </div>
+
+                <div class="add_new_post_button">
+                    <button type="submit">Edit post</button>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

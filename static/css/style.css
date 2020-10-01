@@ -1,0 +1,442 @@
+.header{
+    width: 80%;
+    height: 40px;
+    background-color: #4dc96e;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    top: 0px;
+    left: 10%;
+    z-index: 9999;
+}
+
+.project_logo{
+    width: max-content;
+    display: inline;
+    float: left;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.home_button{
+    width: max-content;
+    border-right-style: ridge;
+    display: inline;
+    float: left;
+}
+
+.my_posts{
+    width: max-content;
+    border-right-style: ridge;
+    float: left;
+    display: inline;
+}
+
+.add_post_button{
+    width: max-content;
+    border-right-style: ridge;
+    float: left;
+    display: inline;
+}
+
+.nav_buttons{
+    display: inline;
+    float: left;
+    margin-top: 6px;
+    margin-left: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.log_buttons{
+    display: inline;
+    float: right;
+    margin-top: 6px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.login{
+    float: right;
+    border-left-style: ridge;
+}
+
+.register{
+    float: right;
+    border-left-style: ridge;
+}
+
+.logged_in_user{
+    float: right;
+    border-left-style: ridge;
+}
+
+.logout{
+    float: right;
+    border-left-style: ridge;
+}
+
+.posts_list{
+    width: 50%;
+    left: 25%;
+    top: 50px;
+    height: max-content;
+
+    position: relative;
+    
+    
+}
+
+.post{
+    width: 100%;
+    height: max-content;
+    border-style: groove;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+
+    position: relative;
+
+    background-color: #cbffc4;
+}
+
+.post_author{
+    width: 100%;
+    height: max-content;
+    background-color: #a1ed98;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    float: left;
+    display: inline;
+}
+
+.post_author a{
+    text-decoration: none;
+    color: blue;
+}
+
+.post_text{
+    width: 100%;
+    height: max-content;
+    margin-bottom: 10px;
+}
+
+.post_imagee{
+    width: max-content;
+    height: max-content;
+}
+
+.post_tags{
+    width: max-content;
+    height: max-content;
+}
+
+.post_created{
+    float: right;
+    padding-right: 10px;
+    color: gray;
+}
+
+.post_edited{
+    float: right;
+    color: gray;
+}
+
+.post_author h3{
+    font-weight: 500;
+}
+
+.post_body{
+    width: 80%;
+    height: max-content;
+    left: 10%;
+    top: 100px;
+    position: relative;
+    border-style: groove;
+}
+
+.post_view_post_name{
+    width: 99%;
+    height: max-content;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #a1ed98;
+}
+
+.post_view_post_body{
+    width: 100%;
+    height: max-content;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #cbffc4;
+}
+
+.post_view_post_text{
+    width: 100%;
+    height: max-content;
+}
+
+.post_view_post_image{
+    width: max-content;
+    height: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.post_view_post_tags{
+    width: max-content;
+    height: max-content;
+}
+
+.post_edit_button{
+    background-color: #cbffc4;
+    height: 40px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.post_edit_button a{
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: green;
+    background-color: yellow;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.post_view_post_created{
+    float: right;
+    color: grey;
+    padding-right: 10px;
+}
+
+.post_view_post_edited{
+    float: right;
+    color: grey;
+
+
+}
+
+.login_form{
+    width: 100%;
+    height: max-content;
+}
+
+.login_field{
+    top: 20%;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+}
+
+.password_field{
+    top: 27%;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+}
+
+.password_field_repeat{
+    top: 34%;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+}
+
+.login_field input{
+    width: 400px;
+    height: 40px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 30px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.password_field input{
+    width: 400px;
+    height: 40px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 30px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.password_field_repeat input{
+    width: 400px;
+    height: 40px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 30px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.login_button{
+    top: 40%;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+}
+
+.login_button input{
+    width: 180px;
+    height: 40px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 30px;
+
+}
+
+.register_redirect{
+    width: 180px;
+    height: 36px;
+    top: 42%;
+    position: absolute;
+    left: 48.5%;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #767676;
+    text-align: center;
+    background-color: #efefef;
+}
+
+.register_redirect a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.flash_messages{
+    width: max-content;
+    height: max-content;
+    left: 38%;
+    top: 50%;
+    position: absolute;
+    color: red;
+}
+
+.name_of_page{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    left: 43%;
+    top: 10%;
+}
+
+.post_edit{
+    text-align: center;
+    background-color: #cbffc4;
+    padding-top: 50px;
+}
+
+.post_edit h1{
+    padding: 60px;
+    padding-bottom: 20px;
+}
+
+.add_post_fields{
+    height: max-content;
+}
+
+.add_post_name input{
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.add_post_name{
+    margin: 5px;
+}
+
+.add_post_text{
+    margin: 5px;
+}
+
+.edit_post_text{
+    margin: 5px;
+}
+
+.add_post_image{
+    margin: 5px;
+    padding-top: 20px;
+}
+
+.add_new_post_button button{
+    width: 250px;
+    height: 40px;
+    font-size: 25px;
+}
+
+.add_new_post_button{
+    padding-top: 50px;
+}
+
+.add_post_image img{
+    margin: 5px;
+}
+
+.add_post_tags{
+    margin: 5px;
+}
+
+.add_post_tags input{
+    padding: 5px;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.add_post_text textarea{
+    width: 50%;
+    height: 300px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.edit_post_text textarea{
+    width: 50%;
+    height: 200px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.add_new_post_buttons{
+    display: inline;
+    text-align: center;
+}
+
+.nav_button{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    text-decoration: none;
+}
+
+.nav_button_active{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
