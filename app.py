@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 import os
 
-from db import db
+#from db import db
 
 from models.post import PostModel
 from models.tag import TagModel
@@ -39,9 +39,9 @@ posts = []
 def load_user(user_id):
     return UserModel.query.get(user_id)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+#@app.before_first_request
+#def create_tables():
+#    db.create_all()
 
 @app.route('/')
 def index():
@@ -279,5 +279,5 @@ def redirect_to_signin(response):
     return response
 
 if __name__ == "__main__":
-    db.init_app(app)
+    #db.init_app(app)
     app.run(port=5000, debug=True)
